@@ -1,0 +1,38 @@
+.comments {
+    .comment-author.vcard {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    ul:first-of-type {
+        padding: 0px;
+    }
+
+    img.avatar {
+        border-radius: 100px;
+    }
+
+    li {
+        list-style-type: none;
+        border-left: 1px solid var(--color-neutral-200);
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+
+    .comment-form-comment textarea {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .required-field-message,
+    .required {
+        display: none !important;
+    }
+
+    .comment-metadata time {
+        color: var(--color-neutral-600);
+    }
+}

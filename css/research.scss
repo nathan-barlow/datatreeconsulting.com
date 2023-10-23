@@ -1,0 +1,30 @@
+.research-archive {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.research-item {
+    clear: right;
+    margin-bottom: var(--gap);
+
+    .research-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+
+        p {
+            margin: 0px;
+        }
+    }
+}
+
+@media (min-width: 980px) {
+    .research-item {
+        figure {
+            width: 30%;
+            float: right;
+            margin-left: 20px;
+        }
+    }
+}

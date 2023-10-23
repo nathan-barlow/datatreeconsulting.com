@@ -1,0 +1,26 @@
+.blog, aside {
+    .card .card-excerpt {
+        display: none;
+    }
+}
+
+.blog {
+    .card:first-of-type .card-excerpt {
+        display: block;
+    }
+}
+
+.blog-category {
+    color: var(--color-neutral-600);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media (min-width: 980px) {
+    .blog {
+        .card:first-of-type {
+            grid-column: span 2;
+            order: -1;
+        }
+    }
+}

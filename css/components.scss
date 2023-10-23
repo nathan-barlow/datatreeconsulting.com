@@ -1,0 +1,179 @@
+// CARDS ------------------------------
+.cards {
+    list-style-type: none;
+    padding: 0px;
+    margin-bottom: var(--gap);
+ }
+
+.cards .wp-block-column,
+.cards .card-link {
+    padding: 25px;
+    display: block;
+}
+
+.cards .wp-block-column,
+.cards .card {
+    background-color: white;
+    border-radius: var(--br-medium);
+    box-shadow: var(--box-shadow);
+}
+
+.cards img {
+    border-radius: var(--br-small);
+}
+
+.card-text {
+    color: var(--color-black);
+}
+
+.cards a {
+    border: none;
+}
+
+// MAILING LIST WIDGET ----------------
+.widget {
+    background-color: var(--color-light);
+    border-radius: var(--br-medium);
+    padding: 25px;
+}
+
+// BUTTONS ----------------------------
+.button,
+.wp-block-button .wp-element-button {
+    background-color: var(--color-main);
+    color: white;
+    border-radius: var(--br-small);
+    display: inline-block;
+}
+
+.button,
+.wp-block-button:not(.has-custom-font-size) .wp-element-button {
+    font-size: 1.1rem;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+// ALERT ------------------------------
+.alert {
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    padding: var(--gap);
+    text-align: center;
+    border-radius: var(--br-medium);
+}
+
+// FULL WIDTH -------------------------
+.full-width {
+    background-color: var(--color-light);
+    position: relative;
+    padding: var(--gap) 0px;
+}
+
+.full-width::before {
+    background: var(--color-light);
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -50vw;
+    right: -50vw;
+    z-index: -1;
+}
+
+.full-width img {
+    top: 0;
+}
+
+// ABOUT LINKS ------------------------
+.about-links > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    a {
+        margin: 0px !important;
+    }
+}
+
+// TAGS -------------------------------
+.tags {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    li {
+        background-color: var(--color-light);
+        border-radius: var(--br-small);
+        padding: 3px 6px;
+    }
+}
+
+// EMAIL SIGN-UP ----------------------
+.sib_signup_form {
+    input[type='email'] {
+        width: 100%;
+        outline: none;
+        border: none;
+        line-height: 2;
+        border-radius: var(--br-small);
+        box-shadow: var(--box-shadow);
+        margin: .5em 0px;
+        padding: .5em;
+    }
+}
+
+footer .sib_signup_form {
+    background-color: var(--color-light-transparent);
+    padding: var(--gap);
+    border-radius: var(--br-medium);
+    max-width: 500px;
+    margin: auto;
+}
+
+// COMMENTS ---------------------------
+.comments {
+    // paragraph before comment form
+    .logged-in-as {
+        .required-field-message {
+            display: block;
+        }
+    }
+
+    .comment-form-comment {
+        label {
+            display: block;
+        }
+
+        textarea {
+            border: none;
+            outline: none;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--br-small);
+            padding: .5em;
+        }
+    }
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    background-color: var(--color-main);
+    border: none;
+    outline: inherit;
+    padding: .5em;
+    color: white;
+    border-radius: var(--br-small);
+}
+
+// HIDE ON MOBILE ---------------------
+.hide-mobile {
+    display: none;
+}
+
+@media (min-width: 980px) {
+    .hide-mobile {
+        display: block;
+    }
+}

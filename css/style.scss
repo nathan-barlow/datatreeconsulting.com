@@ -1,0 +1,286 @@
+/*
+Theme Name: Data Tree Consulting
+Theme URI: https://www.natebarlow.me
+Description: Data Tree Consulting WordPress Theme
+Author: Nathan Barlow
+Author URI: https://www.natebarlow.me
+Version: 1.0
+
+Tags: portfolio
+
+License: License URI:
+
+General comments (optional).
+*/
+
+/* Add CSS files */
+@use 'normalize';
+@use 'nav';
+@use 'components';
+@use 'home';
+@use 'footer';
+@use 'contact';
+@use 'blog';
+@use 'research';
+@use 'comments';
+
+:root {
+   --font-system: "DM Sans", -apple-system, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+   --color-main: #487834;
+   --color-light: #f3f9f1;
+   --color-light-transparent: #5d994310;
+   --color-dark: #2d552d;
+   --color-black: black;
+   --color-neutral-600: #959595;
+   --color-neutral-200: #f8f8f8;
+   --color-white: white;
+   --gradient: var(--color-light);
+   --grid-columns-2: repeat(2, 1fr);
+   --grid-columns-3: repeat(3, 1fr);
+   --grid-columns-4: repeat(4, 1fr);
+   --br-small: 10px;
+   --br-medium: 20px;
+   --gap: 20px;
+   --box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+html {
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+
+::selection {
+   background-color: var(--color-main);
+   color: white;
+}
+
+body {
+   margin: 0;
+   font-family: var(--font-system);
+   overflow-x: hidden;
+}
+
+section {
+   clear: both;
+}
+
+main {
+   overflow-x: hidden;
+}
+
+.center {
+   text-align: center;
+}
+
+.left {
+   text-align: left;
+}
+
+.hidden {
+   display: none;
+}
+
+hr {
+   margin: var(--gap) 0px;
+}
+
+main {
+   min-height: 60vh;
+}
+
+.wrapper {
+   margin: auto;
+   max-width: 1200px;
+   padding: 0px 20px;
+}
+
+.narrow {
+   max-width: 600px;
+
+   img {
+      width: auto;
+   }
+}
+
+.grid,
+.wp-grid > div {
+   display: grid;
+   grid-gap: var(--gap);
+}
+
+.grid-2,
+.wp-grid-2 > div {
+   grid-template-columns: 1fr;
+}
+
+.grid-3,
+.wp-grid-3 > div {
+   grid-template-columns: 1fr;
+}
+
+.grid-4,
+.wp-grid-4 > div {
+   grid-template-columns: 1fr 1fr;
+}
+
+aside > * {
+   margin-bottom: var(--gap);
+}
+
+h1,
+h2 {
+   letter-spacing: -1px;
+}
+
+h1 {
+   text-align: center;
+   font-size: 3em;
+}
+
+p {
+   color: var(--color-text);
+}
+
+p,
+li,
+h1,
+h2,
+h3 {
+   line-height: 1.5;
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-main);
+}
+
+a:not(nav a, footer a, .cards a, .tags a, .wp-block-buttons a, .button) {
+   padding-bottom: 0px;
+   border-bottom: 1px solid var(--color-main);
+   transition: .3s color;
+}
+
+.heading-underline {
+   width: 100%;
+   display: inline-block;
+   padding-bottom: 10px;
+   border-bottom: 1px solid var(--color-black);
+   text-align: left;
+}
+
+.has-large-font-size {
+   font-size: 2.5em !important;
+}
+
+.c-color-main {
+   color: var(--color-main);
+}
+
+.c-color-light {
+   color: var(--color-light);
+}
+
+.c-color-dark {
+   color: var(--color-dark);
+}
+
+.c-color-black {
+   color: var(--color-black);
+}
+
+.c-color-neutral-600,
+.has-gray-color {
+   color: var(--color-neutral-600);
+}
+
+.c-color-neutral-200 {
+   color: var(--color-neutral-200);
+}
+
+.c-color-white {
+   color: var(--color-white);
+}
+
+.bk-color-main {
+   background-color: var(--color-main);
+}
+
+.bk-color-light {
+   background-color: var(--color-light);
+}
+
+.bk-color-dark {
+   background-color: var(--color-dark);
+}
+
+.bk-color-black {
+   background-color: var(--color-black);
+}
+
+.bk-color-neutral-600 {
+   background-color: var(--color-neutral-600);
+}
+
+.bk-color-neutral-200 {
+   background-color: var(--color-neutral-200);
+}
+
+.bk-color-white {
+   background-color: var(--color-white);
+}
+
+/* --- COMPONENTS --- */
+
+/* images */
+figure img {
+   width: 100%;
+   height: auto;
+}
+
+figure {
+   margin-bottom: 2rem;
+}
+
+
+
+/* --- SCREENS BIGGER THAN 980PX --- */
+@media (min-width: 980px) {
+   :root {
+      --gap: 50px;
+   }
+
+   .grid-2,
+   .wp-grid-2 > div {
+      grid-template-columns: 1fr 1fr;
+   }
+   
+   .grid-3,
+   .wp-grid-3 > div {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+   
+   .grid-4,
+   .wp-grid-4 > div {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+
+   .span-2 {
+      grid-column: span 2;
+   }
+}
+
+
+
+/* || IOS DEVICES */
+@supports (-webkit-touch-callout: none) {
+   header {
+      background-attachment: scroll;
+   }
+}
+
